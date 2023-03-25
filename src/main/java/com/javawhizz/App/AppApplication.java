@@ -15,7 +15,7 @@ public class AppApplication {
 	public static void main(String[] args) throws IOException {
 
 		ClassLoader classLoader = AppApplication.class.getClassLoader();
-		File file =  new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey1.json")).getPath());
+		File file =  new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey.json")).getPath());
 		FileInputStream serviceAccount = new FileInputStream(file.getAbsoluteFile());
 
 

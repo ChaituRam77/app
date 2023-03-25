@@ -144,7 +144,7 @@ public class AuctionService {
     public static void main(String[] args) throws IOException {
         AuctionService as = new AuctionService();
         ClassLoader classLoader = AppApplication.class.getClassLoader();
-        File file =  new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey1.json")).getFile());
+        File file =  new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey.json")).getFile());
         FileInputStream serviceAccount = new FileInputStream(file.getAbsoluteFile());
 
         FirebaseOptions options = new FirebaseOptions.Builder()
