@@ -1,6 +1,5 @@
 package com.javawhizz.App;
 
-import com.google.api.client.json.Json;
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
@@ -16,7 +15,7 @@ public class AppApplication {
 	public static void main(String[] args) throws IOException {
 
 		ClassLoader classLoader = AppApplication.class.getClassLoader();
-		File file =  new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey.json")).getPath());
+		File file =  new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey1.json")).getPath());
 		FileInputStream serviceAccount = new FileInputStream(file.getAbsoluteFile());
 
 
