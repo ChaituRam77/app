@@ -1,27 +1,31 @@
 package com.javawhizz.App;
 
+import com.google.api.client.json.Json;
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.Objects;
 
 @SpringBootApplication
 public class AppApplication {
 
 	public static void main(String[] args) throws IOException {
-		ClassLoader classLoader = AppApplication.class.getClassLoader();
-		File file =  new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey.json")).getFile());
-		FileInputStream serviceAccount = new FileInputStream(file.getAbsoluteFile());
 
+//		ClassLoader classLoader = AppApplication.class.getClassLoader();
+//		File file =  new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey.json")).getFile());
+//		FileInputStream serviceAccount = new FileInputStream(file.getAbsoluteFile());
+
+
+//		FirebaseOptions options = new FirebaseOptions.Builder()
+//				.setCredentials(GoogleCredentials.fromStream(serviceAccount))
+//				.setDatabaseUrl("https://auction-c9885-default-rtdb.europe-west1.firebasedatabase.app")
+//				.build();
 		FirebaseOptions options = new FirebaseOptions.Builder()
-				.setCredentials(GoogleCredentials.fromStream(serviceAccount))
+				.setCredentials(GoogleCredentials.fromStream(AppApplication.class.getResourceAsStream("/serviceAccountKey.json")))
 				.setDatabaseUrl("https://auction-c9885-default-rtdb.europe-west1.firebasedatabase.app")
 				.build();
 
