@@ -15,12 +15,13 @@ public class AppApplication {
 	public static void main(String[] args) throws IOException {
 
 		ClassLoader classLoader = AppApplication.class.getClassLoader();
-		File file =  new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey.json")).getPath());
-		FileInputStream serviceAccount = new FileInputStream(file.getAbsoluteFile());
+//		File file =  new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey.json")).getPath());
+//		FileInputStream serviceAccount = new FileInputStream(file.getAbsoluteFile());
 
+		InputStream inputStream = classLoader.getResourceAsStream("serviceAccountKey.json");
 
 		FirebaseOptions options = new FirebaseOptions.Builder()
-				.setCredentials(GoogleCredentials.fromStream(serviceAccount))
+				.setCredentials(GoogleCredentials.fromStream(inputStream))
 				.setDatabaseUrl("https://auction-c9885-default-rtdb.europe-west1.firebasedatabase.app")
 				.build();
 
