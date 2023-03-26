@@ -3,6 +3,7 @@
 /Users/Shared/Projects/app-main/src/main/java/com/javawhizz/App/Constants.java
 /Users/Shared/Projects/app-main/src/main/java/com/javawhizz/App/pojo/AssignToOwnerPojo.java
 /Users/Shared/Projects/app-main/src/main/java/com/javawhizz/App/Auction/Utils.java
+/Users/Shared/Projects/app-main/src/main/java/com/javawhizz/App/core/config/WebMvcConfig.java
 /Users/Shared/Projects/app-main/src/main/java/com/javawhizz/App/Auction/AuctionService.java
 /Users/Shared/Projects/app-main/src/main/java/com/javawhizz/App/customer/Customer.java
 /Users/Shared/Projects/app-main/src/main/java/com/javawhizz/App/pojo/OwnersPojo.java
